@@ -36,9 +36,10 @@ namespace fabric {
       this._overlay = new fabric.Overlay();
       if (!this._dialog.classList.contains("ms-Dialog--blocking")) {
         this._overlay.overlayElement.addEventListener("click", this.close.bind(this), false);
-        this._overlay.show();
+        this._overlay.overlayElement.addEventListener("click", this._overlay.hide.bind(this), false);
         document.body.classList.add("ms-u-overflowHidden");
       }
+      this._overlay.show();
       this._dialog.parentElement.appendChild(this._overlay.overlayElement);
     }
   }
