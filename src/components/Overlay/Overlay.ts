@@ -13,7 +13,6 @@ namespace fabric {
         overlayContainer.setAttribute("class", "ms-Overlay");
         this.overlayElement = overlayContainer;
       }
-      this.overlayElement.addEventListener("click", this.hide.bind(this), false);
     }
 
     public remove() {
